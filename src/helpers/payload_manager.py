@@ -1,11 +1,23 @@
-import allure
-import pytest
+# payloads
 
-class TestCreateBooking(object):
-    @pytest.mark.positive
-    @allure.title("Verify that create booking status and booking ID shoud not be null")
-    @allure.description("Create a booking from the payload and verify that booking ID shoud not be null & "
-                        "status codeshould be 200 for correct payload")
+def payload_create_booking():
+    payload = {
+        "firstname": "Amit",
+        "lastname": "Brown",
+        "totalprice": 111,
+        "depositpaid": True,
+        "bookingdates": {
+            "checkin": "2018-01-01",
+            "checkout": "2019-01-01"
+        },
+        "additionalneeds": "Breakfast"
+    }
+    return payload
 
-    def test_create_booking_positive(self):
-        pass
+
+def payload_create_token():
+    payload = {
+        "username": "admin",
+        "password": "password123"
+    }
+    return payload

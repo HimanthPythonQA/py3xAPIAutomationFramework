@@ -1,6 +1,17 @@
-# contains common utilities
-# e.g read data from excel files/ read data from csv,json files/
-# set the headers----application/json  application/xml
+class Utils(object):
+    def get_common_headers(self):
+        return {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+        }
 
-class utils(object):
-    pass
+    def common_headers_xml(self):
+        return {
+            "Content-Type": "application/xml",
+        }
+
+    def common_header_put_delete_patch_cookie(self, token):
+        return {
+            "Content-Type": "application/json",
+            "Cookie": "token=" + str(token),
+        }

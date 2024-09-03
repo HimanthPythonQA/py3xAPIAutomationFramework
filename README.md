@@ -23,3 +23,7 @@ pytest tests/test/crud/test_create_booking.py --alluredir=allure_result -s
 ## for allure report we use command
 allure serve allure_result
 
+## Allure report screen short
+
+![Screenshot 2024-09-03 143820](https://github.com/user-attachments/assets/8036a5ba-69f7-4153-b67a-9b02d0e5856d)
+
